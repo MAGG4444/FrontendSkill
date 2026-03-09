@@ -1,8 +1,12 @@
+/* --- Esports Dark Theme Variables --- */
 :root {
-  --bg: #f5f7fb;
-  --card: #ffffff;
-  --text: #1f2430;
-  --line: #dce2ef;
+  --bg: #0b0f19;         /* Deep dark background */
+  --card: #151c2c;       /* Slightly lighter card background */
+  --text: #e2e8f0;       /* Crisp light text */
+  --text-muted: #94a3b8; /* Secondary text */
+  --line: #2a3441;       /* Subtle dark borders */
+  --accent: #ceb888;     /* Custom gold accent */
+  --accent-hover: #e0c999;
 }
 
 * {
@@ -11,7 +15,7 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
@@ -22,59 +26,150 @@ body {
   margin: 0 auto;
 }
 
+/* --- Header & Typography --- */
 header {
   text-align: center;
-  padding: 2rem 0 1rem;
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 0.5rem;
 }
 
 .welcome {
-  margin: 0 0 0.3rem;
+  margin: 0;
   font-weight: 600;
-  color: #3e4a68;
+  font-size: 1.1rem;
 }
 
+#player-bio {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+/* --- Cards & Sections --- */
 section {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-h1,
-h2 {
-  margin-top: 0;
+/* --- Lists --- */
+ul {
+  list-style-type: square;
+  color: var(--text-muted);
 }
 
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Image Grid (Game Banners) --- */
 .photos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 figure {
   margin: 0;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Subtle hover effect for game cards */
+figure:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
 }
 
 .photos img {
   width: 100%;
-  height: 180px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid var(--line);
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+figure:hover img {
+  opacity: 1;
 }
 
 figcaption {
   text-align: center;
-  margin-top: 0.25rem;
-  font-size: 0.9rem;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  background: var(--card);
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* --- Buttons & Status --- */
+.invite-btn {
+  background-color: var(--accent);
+  color: #000000;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 10px rgba(206, 184, 136, 0.2);
+}
+
+.invite-btn:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0 0 15px rgba(206, 184, 136, 0.5);
+  transform: scale(1.02);
+}
+
+.status-active {
+  color: #4ade80; /* Neon green */
+  text-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+}
+
+.status-inactive {
+  color: #f87171; /* Neon red */
+}
+
+/* --- Footer --- */
 footer {
   text-align: center;
   font-size: 0.9rem;
-  color: #5f6880;
-  padding: 0.5rem 0 1.5rem;
+  color: var(--text-muted);
+  padding: 2rem 0;
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
 }
 
 @media (max-width: 700px) {

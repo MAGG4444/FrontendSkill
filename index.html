@@ -3,65 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jingwen Huang | Intro</title>
+    <title>Player Profile | CampusGG</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="container">
-      <p class="welcome">Welcome to my website!</p>
-      <h1>Jingwen Huang</h1>
-      <p>I am an international student from Northeastern China.</p>
+      <p class="welcome" id="lfg-status">Loading status...</p>
+      <h1 id="player-name">Loading...</h1>
+      <p id="player-bio">Loading bio...</p>
+      <button class="invite-btn" id="invite-btn">Invite to Team</button>
     </header>
 
     <main class="container">
       <section>
-        <h2>My Interests</h2>
-        <ul>
-          <li>Cooking Chinese food</li>
-          <li>Crochet</li>
-          <li>Playing video games</li>
-        </ul>
+        <h2>Top Games & Ranks</h2>
+        <ul id="games-list">
+          </ul>
 
-        <div class="photos">
-          <figure>
-            <img
-              src="https://images.pexels.com/photos/29529568/pexels-photo-29529568.jpeg?cs=srgb&dl=pexels-236636281-29529568.jpg&fm=jpg"
-              alt="Chinese dumplings"
-              loading="lazy"
-            />
-            <figcaption>Chinese Food</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="https://images.pexels.com/photos/7585268/pexels-photo-7585268.jpeg?cs=srgb&dl=pexels-miriam-alonso-7585268.jpg&fm=jpg"
-              alt="Crochet"
-              loading="lazy"
-            />
-            <figcaption>Crochet</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="https://images.pexels.com/photos/27271924/pexels-photo-27271924.jpeg?cs=srgb&dl=pexels-fox-58267-27271924.jpg&fm=jpg"
-              alt="Gaming controller"
-              loading="lazy"
-            />
-            <figcaption>Gaming</figcaption>
-          </figure>
-        </div>
+        <div class="photos" id="game-images">
+          </div>
       </section>
 
       <section>
-        <h2>Senior Design</h2>
-        <p>Our team will build a campus game-teaming website to help students find teammates more easily.</p>
+        <h2>Recent Activity</h2>
+        <p id="recent-activity">Loading activity...</p>
       </section>
     </main>
 
     <footer class="container">
-      <p>© 2026 Jingwen Huang</p>
-      <p>
-        Image source:
-        <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">Pexels License</a>
-      </p>
+      <p>© 2026 CampusGG</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
